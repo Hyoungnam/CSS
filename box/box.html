@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box1 {
+      /* 배경색의 지정: 콘텐츠 영역과 패딩 영역에 적용된다. */
+      background-color: lightgrey;
+      /* 콘텐츠 영역의 너비 */
+      /* width와 height 프로퍼티는 요소의 너비와 높이를 지정하기 위해 사용된다. 
+      이때 지정되는 요소의 너비와 높이는 콘텐츠 영역을 대상으로 한다 */
+
+      /* 이는 box-sizing 프로퍼티에 기본값인 content-box가 적용되었기 때문이다. 
+      box-sizing 프로퍼티에 border-box를 적용하면 콘텐츠 영역, padding, border가 
+      포함된 영역을 width / height 프로퍼티의 대상으로 지정할 수 있다. */
+
+      width: 300px;
+      /* 패딩 영역의 두께 */
+      padding: 25px;
+      /* 테두리: 두께 형태 색상 */
+      border: 25px solid navy;
+      /* 마진 영역의 두께 */
+      margin: 25px;
+    }
+    .box2 {
+      /* border-box: width, height 프로퍼티 값은 content 영역, padding, border가 포함된 값을 의미한다. */
+      box-sizing: border-box;
+      background-color: lightgrey;
+      width: 300px;
+      padding: 25px;
+      border: 25px solid navy;
+      margin: 25px;
+    }
+
+    /* box-sizing 프로퍼티는 상속되지 않는다. 따라서 box-sizing 프로퍼티를 사용하도록 초기화하려면 아래와 같이 정의한다. */
+    /* html {
+     box-sizing: border-box;
+    }
+    *, *:before, *:after {
+    box-sizing: inherit;
+    } */
+  </style>
+</head>
+<body>
+  <h2>Box Model</h2>
+
+  <div class="box1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+  <div class="box2">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</body>
+</html>
